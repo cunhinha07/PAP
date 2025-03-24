@@ -1,0 +1,309 @@
+/* Estilo Geral */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; /* Remove a barra de rolagem horizontal */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o corpo tenha pelo menos a altura da janela */
+    background-color: #FFFFFF; /* Fundo branco */
+    color: #473D3B; /* Tom escuro para texto */
+    font-family: Arial, sans-serif;
+    box-sizing: border-box; /* Inclui bordas e padding no cálculo de largura e altura */
+}
+
+/* Cabeçalho */
+.header {
+    background-color: #FFFFFF; /* Fundo branco */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #CCCCCC; /* Linha de separação */
+}
+
+.header img {
+    width: 80px;
+}
+
+.header .separator {
+    width: 2px;
+    height: 50px;
+    background-color: #473D3B;
+    margin: 0 15px;
+}
+
+.header h1 {
+    color: #473D3B;
+    margin: 0;
+    font-size: 24px;
+    flex-grow: 1;
+}
+
+/* Header Buttons */
+.header-buttons {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    gap: 15px; /* Adiciona espaço entre os botões "Entrar" e "Registar" */
+    position: relative; /* Necessário para posicionar os dropdowns corretamente */
+}
+
+.header-buttons .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6EBF4B; /* Verde brilhante */
+    border: none; /* Remove borda preta */
+    color: #FFFFFF; /* Texto branco */
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.header-buttons .button .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.header-welcome {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#logout-button {
+    background-color: #6EBF4B; /* Cor de destaque para o botão de logout */
+    border: none;
+    color: #FFFFFF;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+/* Ajusta o estilo geral do contêiner dos botões */
+.dropdown-container {
+    position: relative; /* Permite posicionar o dropdown relativo ao botão */
+}
+
+/* Dropdown */
+.dropdown {
+    display: none; /* Escondido por padrão */
+    position: absolute; /* Posiciona relativo ao contêiner */
+    background-color: #fff; /* Fundo branco */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sutil sombra */
+    border: 1px solid #cccccc; /* Borda leve */
+    border-radius: 5px; /* Bordas arredondadas */
+    z-index: 100; /* Sobre outros elementos */
+    top: calc(100% + 5px); /* Posiciona o menu logo abaixo do botão */
+    left: 0; /* Alinha o dropdown à esquerda do botão */
+    width: 150px; /* Define a largura do menu */
+}
+
+.dropdown-item {
+    padding: 10px 20px;
+    text-align: left;
+    border: none;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    width: 100%; /* Botões ocupam toda a largura */
+}
+
+.dropdown-item:hover {
+    background-color: #f2f2f2; /* Cor de destaque ao passar o mouse */
+}
+
+/* Botão estilizado de Logout */
+.Btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color:#6EBF4B;
+}
+
+.sign {
+  width: 100%;
+  transition-duration: .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign svg {
+  width: 17px;
+}
+
+.sign svg path {
+  fill: white;
+}
+
+.text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 600;
+  transition-duration: .3s;
+}
+
+.Btn:hover {
+  width: 125px;
+  border-radius: 40px;
+  transition-duration: .3s;
+}
+
+.Btn:hover .sign {
+  width: 30%;
+  transition-duration: .3s;
+  padding-left: 20px;
+}
+
+.Btn:hover .text {
+  opacity: 1;
+  width: 70%;
+  transition-duration: .3s;
+  padding-right: 10px;
+}
+
+.Btn:active {
+  transform: translate(2px, 2px);
+}
+
+/* Navegação */
+.nav {
+    display: flex;
+    justify-content: center;
+    background-color: #4B4370; /* Tom roxo escuro */
+    padding: 20px;
+}
+
+.nav a {
+    color: #FFFFFF;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main e Formulário */
+.main {
+    flex: 1; /* Permite que o conteúdo principal ocupe o espaço disponível */
+    display: flex;
+    justify-content: center; /* Centraliza o formulário horizontalmente */
+    align-items: center; /* Centraliza o formulário verticalmente */
+    padding: 40px 20px; /* Espaçamento interno adicional para afastar do nav e do footer */
+    box-sizing: border-box; /* Inclui padding no cálculo do tamanho */
+}
+
+.form {
+    background-color: #fff;
+    padding: 1.5rem;
+    max-width: 400px; /* Largura máxima ajustada */
+    border-radius: 0.5rem; /* Bordas arredondadas */
+    border: 1px solid #CCCCCC; /* Borda leve ao redor do formulário */
+    width: 100%; /* Garante que o formulário ocupe toda a largura disponível */
+    box-sizing: border-box; /* Inclui padding no tamanho total */
+}
+
+.form-title {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    text-align: center;
+    color: #000000;
+}
+
+/* Campos de entrada */
+.input-container {
+    position: relative;
+    width: 100%; /* Garante que os campos não ultrapassem o formulário */
+}
+
+.input-container input {
+    background-color: #fff;
+    padding: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    width: 100%; /* Ajusta a largura para preencher o formulário */
+    border-radius: 0.5rem;
+    border: 1px solid #e5e7eb;
+    margin: 8px 0;
+    box-sizing: border-box; /* Inclui padding e borda no tamanho */
+}
+
+/* Botão de Submissão */
+.submit {
+    display: block;
+    padding: 0.75rem 1.25rem;
+    background-color: #6EBF4B; /* Mesma cor do botão Iniciar Sessão */
+    color: #FFFFFF;
+    font-size: 0.875rem;
+    font-weight: 500;
+    width: 40%; /* Ajusta automaticamente o tamanho horizontal do botão */
+    max-width: 200px; /* Define um tamanho máximo para limitar a largura horizontal */
+    border-radius: 1rem; /* Bordas arredondadas */
+    cursor: pointer;
+    border: none;
+    margin: 0 auto;
+}
+
+/* Link de Registo */
+.signup-link {
+    color: #6B7280;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    text-align: center;
+}
+
+.signup-link a {
+    text-decoration: underline;
+    color: #4F46E5;
+}
+
+/* Footer */
+.footer {
+    background-color: #4B4370; /* Fundo roxo escuro */
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto; /* Mantém o footer no final da página */
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .form {
+        max-width: 320px; /* Ajusta largura do formulário para telas menores */
+    }
+
+    .nav a {
+        margin: 0 10px; /* Reduz espaçamento entre os links */
+    }
+
+    .submit {
+        max-width: 150px; /* Reduz tamanho do botão em telas menores */
+    }
+}

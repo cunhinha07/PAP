@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal | Greener Clinic</title>
+    <link rel="stylesheet" href="styleidx.css">
+    <link rel="icon" href="clinica.ico" type="image/x-icon">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="header">
+    <img src="clinic.png" alt="Greener Clinic Logo">
+    <div class="separator"></div>
+    <h1>Greener Clinic</h1>
+    <div class="header-buttons">
+        <div class="dropdown-container">
+            <button class="button" id="login-button">
+                <img src="pfp.png" alt="Ícone de Perfil" class="icon">
+                Entrar
+            </button>
+            <div class="dropdown" id="login-dropdown">
+                <button class="dropdown-item" onclick="window.location.href='loginUtente.html'">Utente</button>
+                <button class="dropdown-item" onclick="window.location.href='registoMedico.html'">Médico</button>
+            </div>
+        </div>
+
+        <div class="dropdown-container">
+            <button class="button" id="register-button">
+                <img src="pfp.png" alt="Ícone de Perfil" class="icon">
+                Registar
+            </button>
+            <div class="dropdown" id="register-dropdown">
+                <button class="dropdown-item" onclick="window.location.href='registoUtente.html'">Utente</button>
+                <button class="dropdown-item" onclick="window.location.href='registoMedico.html'">Médico</button>
+            </div>
+        </div>
+    </div>
+</div>
+	<div class="nav">
+        <a href="home.html">Página Principal</a>
+        <a href="consulta.html">Marcar Consulta</a>
+		<a href="receita.html">Pedir Receita</a>
+        <a href="sobre.html">Sobre Nós</a>
+    </div>
+    <div class="main">
+        <h2>Bem-vindo à Greener Clinic!</h2>
+        <p>A clínica de todos.</p>
+        <button class="button" onclick="window.location.href='consulta.html'">Marque já a sua consulta!</button>
+    </div>
+    <div class="footer">
+        <p>&copy; 2025 Greener Clinic | Realizado por Afonso Cunha e Bruno Barão</p>
+    </div>
+</body>
+</html>
